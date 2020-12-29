@@ -8,13 +8,22 @@
 
 ## Introduction
 
-In this lesson, we'll introduce functions and cover how to create and execute them. There are no tests, but be sure to follow along with the examples.
+In this lesson, we'll introduce functions and cover how to create and execute
+them. There are no tests, but be sure to follow along with the examples.
 
-If you haven't already, fork and clone this lesson into your local environment. Navigate into its directory in the terminal, then run `code .` to open the files in Visual Studio Code. (If you are using a different text editor, the command will be different.) You will be writing your code in the `index.js` file, and running it by entering `node index.js` in the terminal.
+If you haven't already, fork and clone this lesson into your local environment.
+Navigate into its directory in the terminal, then run `code .` to open the files
+in Visual Studio Code. (If you are using a different text editor, the command
+will be different.) You will be writing your code in the `index.js` file, and
+running it by entering `node index.js` in the terminal.
 
 ## Writing and Calling JavaScript Functions
 
-So far, our programs have consisted of writing individual lines of code directly into a REPL. This is a great way to test out JavaScript functionality and to get a feel for how it handles different values and operations, but it's not super extensible. What if, for example, we wanted to log `"Hello, world!"` a bunch of times? We could write the statement out repeatedly:
+So far, our programs have consisted of writing individual lines of code directly
+into a REPL. This is a great way to test out JavaScript functionality and to get
+a feel for how it handles different values and operations, but it's not super
+extensible. What if, for example, we wanted to log `"Hello, world!"` a bunch of
+times? We could write the statement out repeatedly:
 
 ```js
 console.log('Hello, world!');
@@ -30,11 +39,18 @@ console.log('Hello, world!');
 console.log('Hello, world!');
 ```
 
-But that quickly gets tiresome, and it's easy to see how even small programs would come to rival _War and Peace_ in length.
+But that quickly gets tiresome, and it's easy to see how even small programs
+would come to rival _War and Peace_ in length.
 
 The good news is, there's a better way! We can use a function!
 
-Functions are ways of giving instructions to the JavaScript interpreter that can be reused over and over again by _calling_ the function. Functions are the basic building blocks of programming in many languages (although they aren't always called _functions_), serving both to store the instructions for how to perform a certain task, and to help organize the code in our programs. By using functions &mdash; and giving them meaningful names &mdash; we can make our code easier to read, debug and maintain.
+Functions are ways of giving instructions to the JavaScript interpreter that can
+be reused over and over again by _calling_ the function. Functions are the basic
+building blocks of programming in many languages (although they aren't always
+called _functions_), serving both to store the instructions for how to perform a
+certain task, and to help organize the code in our programs. By using functions
+&mdash; and giving them meaningful names &mdash; we can make our code easier to
+read, debug and maintain.
 
 In JavaScript, functions are written with the `function` keyword:
 
@@ -42,13 +58,23 @@ In JavaScript, functions are written with the `function` keyword:
 function doNothing() {}
 ```
 
-As you can see, when we declare a function, we start with the `function` keyword, followed by a name for the function (in this case, `doNothing`), followed by a pair of parentheses. Next comes a pair of curly braces, which contains the code to be executed when the function is called. In this case, the function, as its name implies, doesn't do much. Copy the function into `index.js` and then execute it by running `node index.js` in the terminal.
+As you can see, when we declare a function, we start with the `function`
+keyword, followed by a name for the function (in this case, `doNothing`),
+followed by a pair of parentheses. Next comes a pair of curly braces, which
+contains the code to be executed when the function is called. In this case, the
+function, as its name implies, doesn't do much. Copy the function into
+`index.js` and then execute it by running `node index.js` in the terminal.
 
 ...
 
-Anything happen? No? Good! This isn't surprising because even though we declared the function, we didn't give it any instructions. (Conventionally, a function that does nothing is called a "noop" (pronounced "no op") &mdash; sometimes they come in handy!)
+Anything happen? No? Good! This isn't surprising because even though we declared
+the function, we didn't give it any instructions. (Conventionally, a function
+that does nothing is called a "noop" (pronounced "no op") &mdash; sometimes they
+come in handy!)
 
-Let's declare another function and this time give it something to do. As mentioned above, we put the code that we want to be executed when our function is called inside the curly braces &mdash; this is called the _function body_.
+Let's declare another function and this time give it something to do. As
+mentioned above, we put the code that we want to be executed when our function
+is called inside the curly braces &mdash; this is called the _function body_.
 
 ```js
 function sayHello() {
@@ -56,9 +82,15 @@ function sayHello() {
 }
 ```
 
-Here we have a function called `sayHello`; its body reads `console.log('Hello!');`. Add this function to `index.js` and then execute it again.
+Here we have a function called `sayHello`; its body reads
+`console.log('Hello!');`. Add this function to `index.js` and then execute it
+again.
 
-What happened this time? Still nothing? That's because the code above is just the _function declaration_. So far, all we have done is _define_ the function. In order to actually execute the code in the function body, we have to _call_ it. To call the function, we simply type the name of the function followed by `()`.
+What happened this time? Still nothing? That's because the code above is just
+the _function declaration_. So far, all we have done is _define_ the function.
+In order to actually execute the code in the function body, we have to _call_
+it. To call the function, we simply type the name of the function followed by
+`()`.
 
 Add the following to `index.js`, after the function declaration:
 
@@ -66,11 +98,12 @@ Add the following to `index.js`, after the function declaration:
 sayHello();
 ```
 
-Now when you execute the code, you should see `'Hello!'` printed in the terminal!
+Now when you execute the code, you should see `'Hello!'` printed in the
+terminal!
 
 ![it's working](https://i.giphy.com/BoBOKNtlR8rTi.gif)
 
-> Note: We've just learned that, in order for the code in a function to be executed, the funtion must be called. Any time you're trying out code, either in a REPL or in your local environment, you'll need to add the function call, as we did above, before executing the code. For **labs**, however, you will generally _not_ need to do this yourself. The tests will take care of it for you.
+> Note: We've just learned that, in order for the code in a function to be executed, the function must be called. Any time you're trying out code, either in a REPL or in your local environment, you'll need to add the function call, as we did above, before executing the code. For **labs**, however, you will generally _not_ need to do this yourself. The tests will take care of it for you.
 
 ### Saying hello
 
@@ -84,7 +117,8 @@ function sayHelloToIsabel() {
 
 Run this code and see what you get. Don't forget to include the function call!
 
-Now what if we want to say hello to Sofia? Well, we could write another function and add it to `index.js`:
+Now what if we want to say hello to Sofia? Well, we could write another function
+and add it to `index.js`:
 
 ```js
 function sayHelloToSofia() {
@@ -110,17 +144,26 @@ sayHelloToSofia();
 sayHelloToBrendan();
 ```
 
-We can stack all three of these calls in `index.js` and, when we execute the code, we should see all three messages output in the terminal.
+We can stack all three of these calls in `index.js` and, when we execute the
+code, we should see all three messages output in the terminal.
 
-While these functions are undoubtedly useful, they're only useful if we only talk to Isabel, Sofia, and Brendan. Every time we want to greet someone new (or use a greeting other than "Hello," for that matter), we need to define a new function.
+While these functions are undoubtedly useful, they're only useful if we only
+talk to Isabel, Sofia, and Brendan. Every time we want to greet someone new (or
+use a greeting other than "Hello," for that matter), we need to define a new
+function.
 
-What if there was some way to take what's similar about these functions &mdash; the fact that they all call `console.log()` with "Hello," a name, and an exclamation point &mdash; and substitute what's different (the name) as we go?
+What if there was some way to take what's similar about these functions &mdash;
+the fact that they all call `console.log()` with "Hello," a name, and an
+exclamation point &mdash; and substitute what's different (the name) as we go?
 
-Turns out, we can! We can use something called an _argument_ to pass information to a function.
+Turns out, we can! We can use something called an _argument_ to pass information
+to a function.
 
 ## Understand `arguments` and `parameters`
 
-Arguments give us a way to pass information into a function to make our functions more flexible. We pass the argument at the time that we **call** the function, by including it inside the parentheses after the name of the function:
+Arguments give us a way to pass information into a function to make our
+functions more flexible. We pass the argument at the time that we **call** the
+function, by including it inside the parentheses after the name of the function:
 
 ```js
 function doSomething(thing) {
@@ -130,9 +173,12 @@ function doSomething(thing) {
 doSomething('anything'); // passing the argument 'anything' into our function 
 ```
 
-Try this out with a few different arguments. you'll see that whatever value we pass in when we _call_ the function is what the function logs. Pretty cool, right?
+Try this out with a few different arguments. you'll see that whatever value we
+pass in when we _call_ the function is what the function logs. Pretty cool,
+right?
 
-We can easily extend this to our "say hello to" example; by using an argument, we no longer need a separate function for each person we want to say hello to:
+We can easily extend this to our "say hello to" example; by using an argument,
+we no longer need a separate function for each person we want to say hello to:
 
 ```js
 function sayHelloTo(firstName) {
@@ -147,17 +193,35 @@ sayHelloTo(1); // "Hello, 1!"
 // ^ Note that in the above, JavaScript coerces the number 1 to the string "1"
 ```
 
-In the examples above, you may have noticed that there's also something inside the parentheses in the function _declaration_: `function sayHelloTo(firstName)`. This is called the **parameter**, in this case `firstName`. A **parameter** is a placeholder that stores whatever value gets passed in as an **argument**. For example, when we run the function call `sayHelloTo('Isabel')`, the value of the argument, 'Isabel', gets stored in the parameter `firstName`. Then, inside the function body, we access that value by using the parameter name, interpolate it into the string, and log the string to the terminal.
+In the example above, you may have noticed that there's also something inside
+the parentheses in the function _declaration_: `function sayHelloTo(firstName)`.
+This is called the **parameter**, in this case `firstName`. A **parameter** is a
+placeholder that stores whatever value gets passed in as an **argument**. For
+example, when we run the function call `sayHelloTo('Isabel')`, the value of the
+argument, 'Isabel', gets stored in the parameter `firstName`. Then, inside the
+function body, we access that value by using the parameter name, interpolate it
+into the string, and log the string to the terminal.
 
-Defining a parameter in our function declaration ensures that the argument gets stored as a local, function-level variable that's available anywhere in the function body. We access the value simply by using the name of the parameter that it's stored in.
+Defining a parameter in our function declaration ensures that the argument gets
+stored as a local, function-level variable that's available anywhere in the
+function body. We access the value simply by using the name of the parameter
+that it's stored in.
 
-Essentially, the arguments are the actual values that we pass to the function, and the parameters are the named references where we store those passed-in values. An argument can be any JavaScript expression - any piece of JavaScript code that evaluates to a value - from something as simple as `5` or `'Avi'` to something as complex as an entire function.
+Essentially, the arguments are the actual values that we pass to the function,
+and the parameters are the named references where we store those passed-in
+values. An argument can be any JavaScript expression - any piece of JavaScript
+code that evaluates to a value &mdash; from something as simple as `5` or
+`'Avi'` to something as complex as an entire function.
 
-Note that we can only access parameters within the body of the function. Try adding `console.log(firstName)` to the end of the `index.js` and running the code. You should see a `ReferenceError` telling you that `firstName` is not defined.
+Note that we can only access parameters within the body of the function. Try
+adding `console.log(firstName)` to the end of the `index.js` and running the
+code. You should see a `ReferenceError` telling you that `firstName` is not
+defined.
 
 ### Saying something new
 
-What if we want to say something other than "Hello"? Well, we can move the greeting to a parameter as well:
+What if we want to say something other than "Hello"? Well, we can move the
+greeting to a parameter as well:
 
 ```js
 function say(greeting, firstName) {
@@ -165,7 +229,9 @@ function say(greeting, firstName) {
 }
 ```
 
-Add the above to your `index.js` file along with the function call `say("Goodbye", "Julio");`. When you run the code you should see "Goodbye, Julio!" written out to the terminal.
+Add the above to your `index.js` file along with the function call
+`say("Goodbye", "Julio");`. When you run the code you should see "Goodbye,
+Julio!" written out to the terminal.
 
 ### Order of Arguments
 
@@ -175,7 +241,9 @@ What if we reversed the order of our arguments? Try this function call:
 say("Julio", "hello");
 ```
 
-You should now see "Julio, hello!" in the terminal. It looks like the name is now stored in the `greeting` parameter and the greeting is stored in the `name` variable. We can verify that by adding a couple more `console.log()`s:
+You should now see "Julio, hello!" in the terminal. It looks like the name is
+now stored in the `greeting` parameter and the greeting is stored in the `name`
+variable. We can verify that by adding a couple more `console.log()`s:
 
 ```js
 function say(greeting, firstName) {
@@ -193,11 +261,18 @@ greeting:  Julio
 Julio, hello!
 ```
 
-You've just illustrated an important point: **the parameter names only have meaning to us, the programmer; JavaScript assigns values to parameters based solely on the order of the arguments that are passed.**
+You've just illustrated an important point: **the parameter names only have
+meaning to us, the programmer; JavaScript assigns values to parameters based
+solely on the order of the arguments that are passed.**
 
 ### Return Values in JavaScript
 
-These functions we've been coding are pretty cool, but they don't actually do a whole lot &mdash; mostly they just print things to the terminal. We've seen how we can make them a little bit more dynamic with arguments, but how do we make them do something for us? For example, we might want to create a function `add()` that allows us to add together two numbers. Enter the following in `index.js`:
+These functions we've been coding are pretty cool, but they don't actually do a
+whole lot &mdash; mostly they just print things to the terminal. We've seen how
+we can make them a little bit more dynamic with arguments, but how do we make
+them do something for us? For example, we might want to create a function
+`add()` that allows us to add together two numbers. Enter the following in
+`index.js`:
 
 ```js
 function add(x, y) {
@@ -205,17 +280,31 @@ function add(x, y) {
 }
 ```
 
-When we return inside a function, we're giving that value back to the world outside the function. Let's add the function call `add(1, 2)` and run the code. Wait &mdash; nothing happened! What's going on here? Well, our function is _returning_ the value of the sum `x + y` but we can't see that because we aren't doing anything with it. So let's use our handy developer tool, `console.log()`, to see what it's returning. Rerun the code after modifying your function call as follows:
+When we return inside a function, we're giving that value back to the world
+outside the function. Let's add the function call `add(1, 2)` and run the code.
+Wait &mdash; nothing happened! What's going on here? Well, our function is
+_returning_ the value of the sum `x + y` but we can't see that because we aren't
+doing anything with it. So let's use our handy developer tool, `console.log()`,
+to see what it's returning. Rerun the code after modifying your function call as
+follows:
 
 ```js
 console.log(add(1,2));
 ```
 
-See that? We got `3` back! What if we pass 80 and 9000 as our arguments instead? Whoa! We got 9080!
+See that? We got `3` back! What if we pass 80 and 9000 as our arguments instead?
+Whoa! We got 9080!
 
-Let's unpack what's happening here. We're _calling_ our `add()` function, passing in two numbers as the arguments. The function is _returning_ the value of the sum of the two arguments, and we're _logging_ that result in the terminal so we can see it. The difference between this and what we were doing before &mdash; having the _function itself_ log something to the terminal &mdash; may seem subtle, but it's actually quite important. Let's look at another example. Be sure to follow along.
+Let's unpack what's happening here. We're _calling_ our `add()` function,
+passing in two numbers as the arguments. The function is _returning_ the value
+of the sum of the two arguments, and we're _logging_ that result in the terminal
+so we can see it. The difference between this and what we were doing before
+&mdash; having the _function itself_ log something to the terminal &mdash; may
+seem subtle, but it's actually quite important. Let's look at another example.
+Be sure to follow along.
 
-Let's rewrite our `say()` function from above so that now instead of `console.log()`-ing what it says, it returns it.
+Let's rewrite our `say()` function from above so that now instead of
+`console.log()`-ing what it says, it returns it.
 
 ```js
 function say(greeting, firstName) {
@@ -223,7 +312,9 @@ function say(greeting, firstName) {
 }
 ```
 
-Now when we call `console.log(say("Hello", "Sofia"));` we'll see `"Hello, Sofia!"`, just as we did before. But what if we try logging the result of calling the _original_ version of the function:
+Now when we call `console.log(say("Hello", "Sofia"));` we'll see `"Hello,
+Sofia!"`, just as we did before. But what if we try logging the result of
+calling the _original_ version of the function:
 
 ```js
 function say(greeting, firstName) {
@@ -238,9 +329,15 @@ Hello, Sofia!
 undefined
 ```
 
-The first line comes from the `console.log()` inside the function body, and the second line comes from logging the result of the function call. What this shows us is that this version of our function **does not have a return value**! This is because a `console.log()` doesn't return anything &mdash; it just writes something out for the developer to see. **In JavaScript, in order to have our function return a value, we need to use the `return` keyword.**
+The first line comes from the `console.log()` inside the function body, and the
+second line comes from logging the result of the function call. What this shows
+us is that this version of our function **does not have a return value**! This
+is because a `console.log()` doesn't return anything &mdash; it just writes
+something out for the developer to see. **In JavaScript, in order to have our
+function return a value, we need to use the `return` keyword.**
 
-We can also see this if we go back to our `add()` function, and remove the `return` keyword:
+We can also see this if we go back to our `add()` function, and remove the
+`return` keyword:
 
 ```js
 function add(x, y) {
@@ -254,9 +351,12 @@ Now if you call the function and log the results:
 console.log(add(1,2));
 ```
 
-you'll see that the function has no return value. Our function is doing the addition but we can't do anything with the result, which makes it pretty useless. Be sure to add the `return` keyword back in.
+you'll see that the function has no return value. Our function is doing the
+addition but we can't do anything with the result, which makes it pretty
+useless. Be sure to add the `return` keyword back in.
 
-So how might be use the results of our `add()` function? Let's say we're creating a simple calculator program. You can imagine how it might work:
+So how might we use the results of our `add()` function? Let's say we're
+creating a simple calculator program. You can imagine how it might work:
 
 1. our program asks the user for the two numbers to add together,
 2. the values are stored into variables (`num1` and `num2`, perhaps),
@@ -276,7 +376,9 @@ Or, equivalently:
 `The sum of your numbers is: ${add(num1, num2)}.`
 ```
 
-There's one last thing you should know about `return` before we move on. Let's say we wanted to both `return` _and_ log a string in our `say()` function; we might try writing:
+There's one last thing you should know about `return` before we move on. If we
+wanted to both `return` _and_ log a string in our `say()` function, we might try
+writing:
 
 ```js
 function say(greeting, firstName) {
@@ -291,11 +393,16 @@ Let's call the function and log the result:
 console.log(say("Howdy", "partner"));
 ```
 
-When you run that code, the return value is logged, but the `console.log()` inside the function body does not execute!
+When you run that code, the return value is logged, but the `console.log()`
+inside the function body does not execute!
 
-This is because `return` **ends the execution inside the function**. Nothing after the line with the `return` will be executed.
+This is because `return` **ends the execution inside the function**. Nothing
+after the line with the `return` will be executed.
 
-**Top Tip:** Take a look at the above code in `index.js`. Depending on which text editor you're using, you may see that the line with the `console.log()` is "grayed out." This is the text editor giving you a hint that that line of code is unreachable.
+**Top Tip:** Take a look at the above code in `index.js`. Depending on which
+text editor you're using, you may see that the line with the `console.log()` is
+"grayed out." This is the text editor giving you a hint that that line of code
+is unreachable.
 
 To both log and return like we want to, we can switch the order around:
 
@@ -310,7 +417,9 @@ Now if we rerun the code, we should see the output of both `console.log()`s.
 
 ## Your turn!
 
-Try rewriting some of the functions that we've written in this lesson to get used to the difference between `return`-ing and printing (`console.log()`-ing) to the terminal. Try writing a function of your own that returns something.
+Try rewriting some of the functions that we've written in this lesson to get
+used to the difference between `return`-ing and printing (`console.log()`-ing)
+to the terminal. Try writing a function of your own that returns something.
 
 ## Resources
 
