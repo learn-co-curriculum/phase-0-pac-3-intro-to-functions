@@ -265,7 +265,7 @@ You've just illustrated an important point: **the parameter names only have
 meaning to us, the programmer; JavaScript assigns values to parameters based
 solely on the order of the arguments that are passed.**
 
-### Return Values in JavaScript
+## Return Values in JavaScript
 
 These functions we've been coding are pretty cool, but they don't actually do a
 whole lot &mdash; mostly they just print things to the terminal. We've seen how
@@ -355,15 +355,24 @@ you'll see that the function has no return value. Our function is doing the
 addition but we can't do anything with the result, which makes it pretty
 useless. Be sure to add the `return` keyword back in.
 
-So how might we use the results of our `add()` function? Let's say we're
-creating a simple calculator program. You can imagine how it might work:
+So how might we use the return value of our `add()` function? Let's say we're
+creating a simple calculator function. You can imagine how it might work:
 
-1. our program asks the user for the two numbers to add together,
+1. the calculator function asks the user to enter two numbers they want to be added together,
 2. the values are stored into variables (`num1` and `num2`, perhaps),
-3. our program calls the `add()` function to add the two numbers together, then
-4. returns a message to the user telling them what the sum is.
+3. the function then calls the `add()` function, passing `num1` and `num2` as arguments,
+4. the `add()` function _returns_ the sum
+5. the calculator function returns a message to the user telling them what the sum is.
 
-The code that creates the message might look something like this:
+Note what's happening in step 3: our calculator function is **calling** our add
+function. This is an important thing to know about functions: they can be called
+by other functions! Eventually we'll want our calculator to do more than just
+add. Rather than build one very long function that contains code for adding,
+subtracting, multiplying, etc., we can _encapsulate_ the code for each operator
+into its own function and call them.
+
+The code that calls the `add()` function and creates the message might look
+something like this:
 
 ```js
 const sum = add(num1,num2);
@@ -376,8 +385,10 @@ Or, equivalently:
 `The sum of your numbers is: ${add(num1, num2)}.`
 ```
 
-There's one last thing you should know about `return` before we move on. If we
-wanted to both `return` _and_ log a string in our `say()` function, we might try
+### One Last Point About `return`
+
+There's one additional thing it's important to know about `return`. If we wanted
+to both `return` _and_ log a string in our `say()` function, we might try
 writing:
 
 ```js
