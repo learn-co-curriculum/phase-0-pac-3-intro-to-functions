@@ -355,8 +355,10 @@ you'll see that the function has no return value. Our function is doing the
 addition but we can't do anything with the result, which makes it pretty
 useless. Be sure to add the `return` keyword back in.
 
-So how might we use the return value of our `add()` function? Let's say we're
-creating a simple calculator function. You can imagine how it might work:
+Setting up your function to return a value means that value is available to be
+used elsewhere in your program. So how might we use the return value of our
+`add()` function? Let's say we're creating a simple calculator function. A
+high-level outline of how it could work might be:
 
 1. the calculator function asks the user to enter two numbers they want to be added together,
 2. the values are stored into variables (`num1` and `num2`, perhaps),
@@ -376,14 +378,16 @@ something like this:
 
 ```js
 const sum = add(num1,num2);
-`The sum of your numbers is: ${sum}.`
+const message = `The sum of your numbers is: ${sum}.`
 ```
 
 Or, equivalently:
 
 ```js
-`The sum of your numbers is: ${add(num1, num2)}.`
+const message = `The sum of your numbers is: ${add(num1, num2)}.`
 ```
+
+The `message` could then be written out to the screen.
 
 ### One Last Point About `return`
 
