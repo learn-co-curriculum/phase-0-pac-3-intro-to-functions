@@ -202,26 +202,45 @@ argument, 'Isabel', gets stored in the parameter `firstName`. Then, inside the
 function body, we access that value by using the parameter name, interpolate it
 into the string, and log the string to the terminal.
 
+Essentially, the arguments are the actual values that we pass to the function,
+and the parameters are the named references where we store those passed-in
+values. An argument can be any JavaScript expression &mdash; any piece of
+JavaScript code that evaluates to a value &mdash; from something as simple as
+`5` or `'Avi'` to something as complex as an entire function.
+
 Defining a parameter in our function declaration ensures that the argument gets
 stored as a local, function-level variable that's available anywhere in the
 function body. We access the value simply by using the name of the parameter
 that it's stored in.
 
-Essentially, the arguments are the actual values that we pass to the function,
-and the parameters are the named references where we store those passed-in
-values. An argument can be any JavaScript expression - any piece of JavaScript
-code that evaluates to a value &mdash; from something as simple as `5` or
-`'Avi'` to something as complex as an entire function.
-
 Note that we can only access parameters within the body of the function. Try
 adding `console.log(firstName)` to the end of the `index.js` and running the
 code. You should see a `ReferenceError` telling you that `firstName` is not
-defined.
+defined. This relates to a very important concept in JavaScript, _variable
+scope_.
+
+#### Variable Scope
+
+Variables in JavaScript exist within a particular **scope**. For example, if a
+variable is defined in a function &mdash; whether it's defined as a parameter or
+inside the body of the function &mdash; it can only be accessed inside that
+function.
+
+Variables can also be declared in the _global scope_, i.e., outside of any
+function. These variables will be accessible (and can potentially be
+overwritten) everywhere within the program. As a general rule, it is best to
+avoid global variables as much as possible because they can lead to bugs that
+can be difficult to track down. Using local variables instead makes it easier to
+keep track of the values of your variables and makes your code easier to debug
+and maintain.
+
+The topic of scope in JavaScript is quite complex. You will learn more about it,
+and its implications, later in the course.
 
 ### Saying something new
 
-What if we want to say something other than "Hello"? Well, we can move the
-greeting to a parameter as well:
+What if we want our function to say something other than "Hello"? Well, we can
+move the greeting to a parameter as well:
 
 ```js
 function say(greeting, firstName) {
