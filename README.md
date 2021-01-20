@@ -433,10 +433,7 @@ inside the function body does not execute!
 This is because `return` **ends the execution inside the function**. Nothing
 after the line with the `return` will be executed.
 
-**Top Tip:** Take a look at the above code in `index.js`. Depending on which
-text editor you're using, you may see that the line with the `console.log()` is
-"grayed out." This is the text editor giving you a hint that that line of code
-is unreachable.
+> **Top Tip:** Take a look at the above code in `index.js`. Depending on which text editor you're using, you may see that the line with the `console.log()` is "grayed out." This is the text editor giving you a hint that that line of code is unreachable.
 
 To both log and return like we want to, we can switch the order around:
 
