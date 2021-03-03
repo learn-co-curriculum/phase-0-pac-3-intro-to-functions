@@ -12,10 +12,13 @@ In this lesson, we'll introduce functions and cover how to create and execute
 them. There are no tests, but be sure to follow along with the examples.
 
 If you haven't already, fork and clone this lesson into your local environment.
-Navigate into its directory in the terminal, then run `code .` to open the files
-in Visual Studio Code. (If you are using a different text editor, the command
-will be different.) You will be writing your code in the `index.js` file, and
-running it by entering `node index.js` in the terminal.
+(Since this lesson doesn't have a "Fork" button, you'll need to click the GitHub
+"octocat" button at the top of the page to open the lesson's repo, then click
+the fork button in the upper right corner.) Clone the lesson to your local
+environment, navigate into the lesson directory in the terminal, then run `code .`
+to open the files in Visual Studio Code. (If you are using a different text
+editor, the command will be different.) You will be writing your code in the
+`index.js` file, and running it by entering `node index.js` in the terminal.
 
 ## Writing and Calling JavaScript Functions
 
