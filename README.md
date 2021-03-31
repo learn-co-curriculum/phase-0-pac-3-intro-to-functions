@@ -101,7 +101,7 @@ Add the following to `index.js`, after the function declaration:
 sayHello();
 ```
 
-Now when you execute the code, you should see `'Hello!'` printed in the
+Now when you execute the code, you should see `Hello!` printed in the
 terminal!
 
 ![it's working](https://i.giphy.com/BoBOKNtlR8rTi.gif)
@@ -129,7 +129,7 @@ function sayHelloToSofia() {
 }
 ```
 
-When we can call it, we should see "Hello, Sofia!" written out in the terminal.
+When we can call it, we should see `Hello, Sofia!` written out in the terminal.
 
 Okay, now we're going to say hello to Brendan — you know the drill!
 
@@ -176,7 +176,7 @@ function doSomething(thing) {
 doSomething('anything'); // passing the argument 'anything' into our function 
 ```
 
-Try this out with a few different arguments. you'll see that whatever value we
+Try this out with a few different arguments. You'll see that whatever value we
 pass in when we _call_ the function is what the function logs. Pretty cool,
 right?
 
@@ -334,8 +334,8 @@ function say(greeting, firstName) {
 }
 ```
 
-Now when we call `console.log(say("Hello", "Sofia"));` we'll see `"Hello,
-Sofia!"`, just as we did before. But what if we try logging the result of
+Now when we call `console.log(say("Hello", "Sofia"));` we'll see `Hello,
+Sofia!`, just as we did before. But what if we try logging the result of
 calling the _original_ version of the function:
 
 ```js
