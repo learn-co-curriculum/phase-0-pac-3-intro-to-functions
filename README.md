@@ -344,7 +344,7 @@ function say(greeting, firstName) {
 }
 ```
 
-Now we get the following:
+Now `console.log(say("Hello", "Sofia"));` will result in the following:
 
 ```bash
 Hello, Sofia!
