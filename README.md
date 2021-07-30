@@ -52,7 +52,7 @@ be reused over and over again by _calling_ the function. Functions are the basic
 building blocks of programming in many languages (although they aren't always
 called _functions_), serving both to store the instructions for how to perform a
 certain task, and to help organize the code in our programs. By using functions
-&mdash; and giving them meaningful names &mdash; we can make our code easier to
+— and giving them meaningful names — we can make our code easier to
 read, debug and maintain.
 
 In JavaScript, functions are written with the `function` keyword:
@@ -72,12 +72,12 @@ function, as its name implies, doesn't do much. Copy the function into
 
 Anything happen? No? Good! This isn't surprising because even though we declared
 the function, we didn't give it any instructions. (Conventionally, a function
-that does nothing is called a "noop" (pronounced "no op") &mdash; sometimes they
+that does nothing is called a "noop" (pronounced "no op") — sometimes they
 come in handy!)
 
 Let's declare another function and this time give it something to do. As
 mentioned above, we put the code that we want to be executed when our function
-is called inside the curly braces &mdash; this is called the _function body_.
+is called inside the curly braces — this is called the _function body_.
 
 ```js
 function sayHello() {
@@ -110,7 +110,7 @@ terminal!
 
 ### Saying hello
 
-Let's write a function to say hello to Isabel &mdash; be sure to follow along!
+Let's write a function to say hello to Isabel — be sure to follow along!
 
 ```js
 function sayHelloToIsabel() {
@@ -155,9 +155,9 @@ talk to Isabel, Sofia, and Brendan. Every time we want to greet someone new (or
 use a greeting other than "Hello," for that matter), we need to define a new
 function.
 
-What if there was some way to take what's similar about these functions &mdash;
+What if there was some way to take what's similar about these functions —
 the fact that they all call `console.log()` with "Hello," a name, and an
-exclamation point &mdash; and substitute what's different (the name) as we go?
+exclamation point — and substitute what's different (the name) as we go?
 
 Turns out, we can! We can use something called an _argument_ to pass information
 to a function.
@@ -207,8 +207,8 @@ into the string, and log the string to the terminal.
 
 Essentially, the arguments are the actual values that we pass to the function,
 and the parameters are the named references where we store those passed-in
-values. An argument can be any JavaScript expression &mdash; any piece of
-JavaScript code that evaluates to a value &mdash; from something as simple as
+values. An argument can be any JavaScript expression — any piece of
+JavaScript code that evaluates to a value — from something as simple as
 `5` or `'Avi'` to something as complex as an entire function.
 
 Defining a parameter in our function declaration ensures that the argument gets
@@ -225,8 +225,8 @@ scope_.
 #### Variable Scope
 
 Variables in JavaScript exist within a particular **scope**. For example, if a
-variable is defined in a function &mdash; whether it's defined as a parameter or
-inside the body of the function &mdash; it can only be accessed inside that
+variable is defined in a function — whether it's defined as a parameter or
+inside the body of the function — it can only be accessed inside that
 function.
 
 Variables can also be declared in the _global scope_, i.e., outside of any
@@ -290,7 +290,7 @@ solely on the order of the arguments that are passed.**
 ## Return Values in JavaScript
 
 These functions we've been coding are pretty cool, but they don't actually do a
-whole lot &mdash; mostly they just print things to the terminal. We've seen how
+whole lot — mostly they just print things to the terminal. We've seen how
 we can make them a little bit more dynamic with arguments, but how do we make
 them do something for us? For example, we might want to create a function
 `add()` that allows us to add together two numbers. Enter the following in
@@ -304,7 +304,7 @@ function add(x, y) {
 
 When we return inside a function, we're giving that value back to the world
 outside the function. Let's add the function call `add(1, 2)` and run the code.
-Wait &mdash; nothing happened! What's going on here? Well, our function is
+Wait — nothing happened! What's going on here? Well, our function is
 _returning_ the value of the sum `x + y` but we can't see that because we aren't
 doing anything with it. So let's use our handy developer tool, `console.log()`,
 to see what it's returning. Rerun the code after modifying your function call as
@@ -321,7 +321,7 @@ Let's unpack what's happening here. We're _calling_ our `add()` function,
 passing in two numbers as the arguments. The function is _returning_ the value
 of the sum of the two arguments, and we're _logging_ that result in the terminal
 so we can see it. The difference between this and what we were doing before
-&mdash; having the _function itself_ log something to the terminal &mdash; may
+— having the _function itself_ log something to the terminal — may
 seem subtle, but it's actually quite important. Let's look at another example.
 Be sure to follow along.
 
@@ -354,7 +354,7 @@ undefined
 The first line comes from the `console.log()` inside the function body, and the
 second line comes from logging the result of the function call. What this shows
 us is that this version of our function **does not have a return value**! This
-is because a `console.log()` doesn't return anything &mdash; it just writes
+is because a `console.log()` doesn't return anything — it just writes
 something out for the developer to see. **In JavaScript, in order to have our
 function return a value, we need to use the `return` keyword.**
 
