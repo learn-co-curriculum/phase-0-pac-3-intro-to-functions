@@ -2,9 +2,9 @@
 
 ## Learning Objectives
 
-* Writing and calling JavaScript functions
-* Understand `arguments` and `parameters`
-* Learn what a return value is in JavaScript
+- Writing and calling JavaScript functions
+- Understand `arguments` and `parameters`
+- Learn what a return value is in JavaScript
 
 ## Introduction
 
@@ -29,17 +29,17 @@ extensible. What if, for example, we wanted to log `"Hello, world!"` a bunch of
 times? We could write the statement out repeatedly:
 
 ```js
-console.log('Hello, world!');
-console.log('Hello, world!');
-console.log('Hello, world!');
-console.log('Hello, world!');
-console.log('Hello, world!');
-console.log('Hello, world!');
-console.log('Hello, world!');
-console.log('Hello, world!');
-console.log('Hello, world!');
-console.log('Hello, world!');
-console.log('Hello, world!');
+console.log("Hello, world!");
+console.log("Hello, world!");
+console.log("Hello, world!");
+console.log("Hello, world!");
+console.log("Hello, world!");
+console.log("Hello, world!");
+console.log("Hello, world!");
+console.log("Hello, world!");
+console.log("Hello, world!");
+console.log("Hello, world!");
+console.log("Hello, world!");
 ```
 
 But that quickly gets tiresome, and it's easy to see how even small programs
@@ -81,7 +81,7 @@ is called inside the curly braces — this is called the _function body_.
 
 ```js
 function sayHello() {
-  console.log('Hello!');
+  console.log("Hello!");
 }
 ```
 
@@ -104,9 +104,12 @@ sayHello();
 Now when you execute the code, you should see `Hello!` printed in the
 terminal!
 
-![it's working](https://i.giphy.com/BoBOKNtlR8rTi.gif)
-
-> Note: We've just learned that, in order for the code in a function to be executed, the function must be called. Any time you're trying out code, either in a REPL or in your local environment, you'll need to add the function call, as we did above, before executing the code. For **labs**, however, you will generally _not_ need to do this yourself. The tests will take care of it for you.
+> Note: We've just learned that, in order for the code in a function to be
+> executed, the function must be called. Any time you're trying out code, either
+> in a REPL or in your local environment, you'll need to add the function call,
+> as we did above, before executing the code. For **labs**, however, you will
+> generally _not_ need to do this yourself. The tests will take care of it for
+> you.
 
 ### Saying hello
 
@@ -173,7 +176,7 @@ function doSomething(thing) {
   console.log(thing);
 }
 
-doSomething('anything'); // passing the argument 'anything' into our function 
+doSomething("anything"); // passing the argument 'anything' into our function
 ```
 
 Try this out with a few different arguments. You'll see that whatever value we
@@ -188,7 +191,7 @@ function sayHelloTo(firstName) {
   console.log(`Hello, ${firstName}!`);
 }
 
-sayHelloTo('Isabel'); // "Hello, Isabel!"
+sayHelloTo("Isabel"); // "Hello, Isabel!"
 sayHelloTo("Jane"); // "Hello, Jane!"
 sayHelloTo("R2-D2"); // "Hello, R2-D2!"
 sayHelloTo(1); // "Hello, 1!"
@@ -222,7 +225,7 @@ code. You should see a `ReferenceError` telling you that `firstName` is not
 defined. This relates to a very important concept in JavaScript, _variable
 scope_.
 
-#### Variable Scope
+### Variable Scope
 
 Variables in JavaScript exist within a particular **scope**. For example, if a
 variable is defined in a function — whether it's defined as a parameter or
@@ -277,7 +280,7 @@ function say(greeting, firstName) {
 
 When you run this using the function call above, you should see this:
 
-```bash
+```txt
 firstName:  hello
 greeting:  Julio
 Julio, hello!
@@ -311,7 +314,7 @@ to see what it's returning. Rerun the code after modifying your function call as
 follows:
 
 ```js
-console.log(add(1,2));
+console.log(add(1, 2));
 ```
 
 See that? We got `3` back! What if we pass 80 and 9000 as our arguments instead?
@@ -330,12 +333,11 @@ Let's rewrite our `say()` function from above so that now instead of
 
 ```js
 function say(greeting, firstName) {
-  return `${greeting}, ${firstName}!`
+  return `${greeting}, ${firstName}!`;
 }
 ```
 
-Now when we call `console.log(say("Hello", "Sofia"));` we'll see `Hello,
-Sofia!`, just as we did before. But what if we try logging the result of
+Now when we call `console.log(say("Hello", "Sofia"));` we'll see `Hello, Sofia!`, just as we did before. But what if we try logging the result of
 calling the _original_ version of the function:
 
 ```js
@@ -346,7 +348,7 @@ function say(greeting, firstName) {
 
 Now `console.log(say("Hello", "Sofia"));` will result in the following:
 
-```bash
+```txt
 Hello, Sofia!
 undefined
 ```
@@ -370,7 +372,7 @@ function add(x, y) {
 Now if you call the function and log the results:
 
 ```js
-console.log(add(1,2));
+console.log(add(1, 2));
 ```
 
 you'll see that the function has no return value. Our function is doing the
@@ -382,11 +384,14 @@ used elsewhere in your program. So how might we use the return value of our
 `add()` function? Let's say we're creating a simple calculator function. A
 high-level outline of how it could work might be:
 
-1. the calculator function asks the user to enter two numbers they want to be added together,
+1. the calculator function asks the user to enter two numbers they want to be
+   added together,
 2. the values are stored into variables (`num1` and `num2`, perhaps),
-3. the function then calls the `add()` function, passing `num1` and `num2` as arguments,
+3. the function then calls the `add()` function, passing `num1` and `num2` as
+   arguments,
 4. the `add()` function _returns_ the sum
-5. the calculator function returns a message to the user telling them what the sum is.
+5. the calculator function returns a message to the user telling them what the
+   sum is.
 
 Note what's happening in step 3: our calculator function is **calling** our add
 function. This is an important thing to know about functions: they can be called
@@ -399,14 +404,14 @@ The code that calls the `add()` function and creates the message might look
 something like this:
 
 ```js
-const sum = add(num1,num2);
-const message = `The sum of your numbers is: ${sum}.`
+const sum = add(num1, num2);
+const message = `The sum of your numbers is: ${sum}.`;
 ```
 
 Or, equivalently:
 
 ```js
-const message = `The sum of your numbers is: ${add(num1, num2)}.`
+const message = `The sum of your numbers is: ${add(num1, num2)}.`;
 ```
 
 The `message` could then be written out to the screen.
@@ -420,7 +425,7 @@ writing:
 ```js
 function say(greeting, firstName) {
   return `${greeting}, ${firstName}!`;
-  console.log('I was called!');
+  console.log("I was called!");
 }
 ```
 
@@ -436,13 +441,16 @@ inside the function body does not execute!
 This is because `return` **ends the execution inside the function**. Nothing
 after the line with the `return` will be executed.
 
-> **Top Tip:** Take a look at the above code in `index.js`. Depending on which text editor you're using, you may see that the line with the `console.log()` is "grayed out." This is the text editor giving you a hint that that line of code is unreachable.
+> **Top Tip:** Take a look at the above code in `index.js`. Depending on which
+> text editor you're using, you may see that the line with the `console.log()`
+> is "grayed out." This is the text editor giving you a hint that that line of
+> code is unreachable.
 
 To both log and return like we want to, we can switch the order around:
 
 ```js
 function say(greeting, firstName) {
-  console.log('I was called!');
+  console.log("I was called!");
   return `${greeting}, ${firstName}!`;
 }
 ```
@@ -457,4 +465,4 @@ to the terminal. Try writing a function of your own that returns something.
 
 ## Resources
 
-* [MDN - Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+- [MDN - Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
