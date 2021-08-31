@@ -1,6 +1,6 @@
 # Introduction to Functions in JavaScript
 
-## Learning Objectives
+## Learning Goals
 
 - Writing and calling JavaScript functions
 - Understand `arguments` and `parameters`
