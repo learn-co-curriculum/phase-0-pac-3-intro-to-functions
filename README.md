@@ -113,48 +113,48 @@ terminal!
 
 ### Saying hello
 
-Let's write a function to say hello to Isabel — be sure to follow along!
+Let's write a function to say hello to Guadalupe — be sure to follow along!
 
 ```js
-function sayHelloToIsabel() {
-  console.log("Hello, Isabel!");
+function sayHelloToGuadalupe() {
+  console.log("Hello, Guadalupe!");
 }
 ```
 
 Run this code and see what you get. Don't forget to include the function call!
 
-Now what if we want to say hello to Sofia? Well, we could write another function
+Now what if we want to say hello to Liz? Well, we could write another function
 and add it to `index.js`:
 
 ```js
-function sayHelloToSofia() {
-  console.log("Hello, Sofia!");
+function sayHelloToLiz() {
+  console.log("Hello, Liz!");
 }
 ```
 
-When we can call it, we should see `Hello, Sofia!` written out in the terminal.
+When we can call it, we should see `Hello, Liz!` written out in the terminal.
 
-Okay, now we're going to say hello to Brendan — you know the drill!
+Okay, now we're going to say hello to Samip — you know the drill!
 
 ```js
-function sayHelloToBrendan() {
-  console.log("Hello, Brendan!");
+function sayHelloToSamip() {
+  console.log("Hello, Samip!");
 }
 ```
 
 Now let's call all three!
 
 ```js
-sayHelloToIsabel();
-sayHelloToSofia();
-sayHelloToBrendan();
+sayHelloToGuadalupe();
+sayHelloToLiz();
+sayHelloToSamip();
 ```
 
 We can stack all three of these calls in `index.js` and, when we execute the
 code, we should see all three messages output in the terminal.
 
 While these functions are undoubtedly useful, they're only useful if we only
-talk to Isabel, Sofia, and Brendan. Every time we want to greet someone new (or
+talk to Guadalupe, Liz, and Samip. Every time we want to greet someone new (or
 use a greeting other than "Hello," for that matter), we need to define a new
 function.
 
@@ -191,7 +191,7 @@ function sayHelloTo(firstName) {
   console.log(`Hello, ${firstName}!`);
 }
 
-sayHelloTo("Isabel"); // "Hello, Isabel!"
+sayHelloTo("Guadalupe"); // "Hello, Guadalupe!"
 sayHelloTo("Jane"); // "Hello, Jane!"
 sayHelloTo("R2-D2"); // "Hello, R2-D2!"
 sayHelloTo(1); // "Hello, 1!"
@@ -203,8 +203,8 @@ In the example above, you may have noticed that there's also something inside
 the parentheses in the function _declaration_: `function sayHelloTo(firstName)`.
 This is called the **parameter**, in this case `firstName`. A **parameter** is a
 placeholder that stores whatever value gets passed in as an **argument**. For
-example, when we run the function call `sayHelloTo('Isabel')`, the value of the
-argument, 'Isabel', gets stored in the parameter `firstName`. Then, inside the
+example, when we run the function call `sayHelloTo('Guadalupe')`, the value of the
+argument, 'Guadalupe', gets stored in the parameter `firstName`. Then, inside the
 function body, we access that value by using the parameter name, interpolate it
 into the string, and log the string to the terminal.
 
@@ -337,7 +337,8 @@ function say(greeting, firstName) {
 }
 ```
 
-Now when we call `console.log(say("Hello", "Sofia"));` we'll see `Hello, Sofia!`, just as we did before. But what if we try logging the result of
+Now when we call `console.log(say("Hello", "Liz"));` we'll see
+`Hello, Liz!`, just as we did before. But what if we try logging the result of
 calling the _original_ version of the function:
 
 ```js
@@ -346,10 +347,10 @@ function say(greeting, firstName) {
 }
 ```
 
-Now `console.log(say("Hello", "Sofia"));` will result in the following:
+Now `console.log(say("Hello", "Liz"));` will result in the following:
 
 ```txt
-Hello, Sofia!
+Hello, Liz!
 undefined
 ```
 
