@@ -24,7 +24,8 @@ Once the lesson has been forked, clone it to your local environment, navigate
 into the lesson directory in the terminal, then run `code .` to open the files
 in Visual Studio Code. (If you are using a different text editor, the command
 will be different.) You will be writing your code in the `index.js` file, and
-running it by entering `node index.js` in the terminal.
+running it by entering `node index.js` in the terminal. Remember that you need
+to save the file before running the command.
 
 ## Writing and Calling JavaScript Functions
 
