@@ -13,7 +13,7 @@ them. There are no tests, but be sure to follow along with the examples.
 
 ## Getting Started
 
-To start, fork and clone this lesson into your local environment. 
+To start, **fork and clone** this lesson into your local environment. 
 
 Once the lesson has been forked and cloned, navigate into the lesson directory
 in the terminal, then run `code .` to open the files in Visual Studio Code.
